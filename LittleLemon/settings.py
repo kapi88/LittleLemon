@@ -30,6 +30,10 @@ INSTALLED_APPS = [
 
     # My app's
     'restaurant',
+    'api',
+
+    # Third party libraries
+     'rest_framework',
 ]
 
 MIDDLEWARE = [
