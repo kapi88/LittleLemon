@@ -35,22 +35,22 @@
 
 # Home page
 
-[localhost]('http://127.0.0.1:8000/')
+[localhost](http://127.0.0.1:8000/)
 
-![homepage]('https://github.com/kapi88/LittleLemon/blob/main/media/homepage.png')
+![homepage](https://github.com/kapi88/LittleLemon/blob/main/media/homepage.png)
 --
 
 # API Documentation
 
-[api documentation]('http://127.0.0.1:8000/api/docs/')  
+[api documentation](http://127.0.0.1:8000/api/docs/)  
 
-![api documentation]('https://github.com/kapi88/LittleLemon/blob/main/media/api_docs.png')
+![api documentation](https://github.com/kapi88/LittleLemon/blob/main/media/api_docs.png)
 
 ---
 
 # Django admin
 
-[django admin]('http://127.0.0.1:8000/admin/')
+[django admin](http://127.0.0.1:8000/admin/)
 
 **username:** admin   
 **password:** admin
