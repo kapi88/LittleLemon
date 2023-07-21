@@ -1,8 +1,8 @@
 from pathlib import Path
 import os
-import environ
+#import environ
 
-env = environ.Env()
+#env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -13,10 +13,10 @@ environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = '%8fa27)8c%(0kgq+(fpje_tj!2^k9%8$pjd#5-+fzvmme4f09%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG')
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
