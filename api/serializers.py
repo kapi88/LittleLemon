@@ -6,7 +6,7 @@ from restaurant.models import Menu, Reserva
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id', 'is_superuser', 'username', 'first_name', 'last_name', 'email']
 
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:

@@ -3,6 +3,8 @@ from .serializers import UserSerializer, MenuSerializer, BookingSerializer
 from django.contrib.auth.models import User
 from restaurant.models import Menu, Reserva
 
+
+
 # Create your views here.
 class UserViewSet(viewsets.ModelViewSet):
    queryset = User.objects.all()

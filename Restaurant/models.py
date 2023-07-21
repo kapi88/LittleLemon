@@ -6,7 +6,10 @@ class Menu(models.Model):
     inventory = models.IntegerField(default=5)
 
     def __str__(self) -> str:
-        return self.title
+        return f'{self.title} : {str(self.price)}'
+    
+    def get_item(self):
+        return f'{self.title} : {str(self.price)}'
 
 class Reserva(models.Model):
     name = models.CharField(max_length=255)

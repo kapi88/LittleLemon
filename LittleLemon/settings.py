@@ -20,10 +20,8 @@ DEBUG = env.bool('DEBUG')
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS =[
     # django apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -31,16 +29,20 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
+]
+THIRPARTY_APPS =[
     # Third party libraries
     'rest_framework',
     'rest_framework.authtoken',
     'djoser',
-
+]
+PROJECT_APPS =[
      # My app's
     'restaurant',
     'api',
 ]
+
+INSTALLED_APPS = DJANGO_APPS + THIRPARTY_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,12 +78,26 @@ WSGI_APPLICATION = 'LittleLemon.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': '3306',
+        'CONN_MAX_AGE': 300,  
     }
 }
+
 
 
 # Password validation

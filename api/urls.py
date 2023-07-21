@@ -1,8 +1,7 @@
 
 from django.urls import include, path
-from api.views import UserViewSet
 from rest_framework import routers
-from .views import MenuItemView, SingleMenuItemView, BookingViewSet
+from .views import MenuItemView, SingleMenuItemView, BookingViewSet, UserViewSet
 
 
 app_name = 'api'
